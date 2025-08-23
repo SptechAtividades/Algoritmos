@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex009</title>
+</head>
+<body>
+    <h2>votos</h2>
+    Digite aqui a quantidade de votos do candidato A: <input id="ipt_a"> <br>
+    Digite aqui a quantidade de votos do candidato B: <input id="ipt_b"> <br>
+    Digite aqui a quantidade de votos brancos: <input id="ipt_brancos"> <br>
+    Digite aqui a quantidade de votos nulos: <input id="ipt_nulos"> <br>
+    <button onclick="resultado()">Resultado da eleição</button>
+
+    <h2 id="msg">
+
+    </h2>
+</body>
+<script>
+    function resultado(){
+        // recebem os valores
+        var votoA = Number(ipt_a.value); 
+        var votoB = Number(ipt_b.value); 
+        var nulos = Number(ipt_nulos.value);
+        var brancos = Number(ipt_brancos.value);
+
+        //calcula o total
+        var total = Number(votoA + votoB + nulos + brancos);
+
+        //calcula o valor 
+        var votoA_porc = Number(total * votoA) / 100;  
+        var votoB_porc = Number(total * votoB) / 100; 
+        var nulos_porc = Number(total * nulos) / 100;
+        var brancos_porc = Number(brancos * total) / 100;
+
+
+        //exibe mensagenzinha bonitinha
+         msg.innerHTML = "total de votos " + total + ", </br> candidato A: " + votoA_porc + "% <br> Total de candidatos candidato B: " + votoB_porc + "% <br>Total de votos nulos: " + nulos_porc + "%<br> Total de votos brancos " + brancos_porc + "%"; 
+    }
+</script>
+</html>

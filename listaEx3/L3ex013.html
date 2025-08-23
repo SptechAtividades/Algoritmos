@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex013</title>
+</head>
+<body>
+    Informe o valor da passagem:  <input id="ipt_passagem"> <br>
+    Informe a quantidade de viagens: <input id="ipt_viagem"> <br>
+    Informe a distância: <input id="ipt_distancia"> <br>
+    <button onclick="Calcular()">Calcular VT</button>
+
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function Calcular(){
+        var vl_psg = Number(ipt_passagem.value);
+        var qtd_vgm = Number(ipt_viagem.value);
+        var dist = Number(ipt_distancia.value);
+        var calc = vl_psg * qtd_vgm;
+        var uber = (dist * 0.75) * qtd_vgm;
+        
+
+        msg.innerHTML = "Você vai gastar " + calc + " por mês com transporte. Considerando as viagens de Uber " + uber + " você irá gastar por mes ";
+    }
+</script>
+</html>

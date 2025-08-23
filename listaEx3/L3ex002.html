@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex002</title>
+</head>
+<body>
+    <h2>Posso me aposentar?</h2>
+
+    Qual sua idade? <input id="ipt_Usuario"> <br>
+    <button onclick="homem()">Aposentadoria Homem</button><br>
+    <button onclick="mulher()">Aposentadoria Mulher</button><br>
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function homem(){
+        var idade = Number(ipt_Usuario.value);
+        var dif = (70 - idade);
+
+        msg.innerHTML += "Faltam " + dif + " anos para você se aposentar!<br>";
+    }
+
+    function mulher(){
+        var idade = Number(ipt_Usuario.value);
+        var dif = (65 - idade);
+
+        msg.innerHTML += "Faltam " + dif + " anos para você se aposentar!<br>";
+    }
+</script>
+</html>

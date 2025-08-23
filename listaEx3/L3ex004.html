@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex 004</title>
+</head>
+<body>
+    digite aqui o valor das pizzas: <input id="vl_pz"> <br>
+    digite a quantidade de pessoas: <input id="qtd_amg"> <br>
+    <button onclick="calc()">#lovePizza</button>
+
+    <div id="msg"></div>
+</body>
+<script>
+    function calc(){
+        var valor = Number(vl_pz.value);
+        var pessoas = Number(qtd_amg.value);
+        var calculo = ( valor / pessoas);
+
+        msg.innerHTML = "Cada um dos " + pessoas + " amigos vai pagar R$" + calculo;
+    }
+</script>
+</html>

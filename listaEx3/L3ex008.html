@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex008</title>
+</head>
+<body>
+    Digite aqui quantas horas você dormiu esta noite: <input id="ipt_hr_dorm">
+    <button onclick="calcular()">Calcular sono</button>
+
+    <div id="msg"></div>
+</body>
+<script>
+    function calcular() {
+        var horasDormidas = Number(ipt_hr_dorm.value);
+        var hora1 = horasDormidas * 0.05;
+        var hora2 = horasDormidas * 0.45;
+        var hora3 = horasDormidas * 0.30;
+        var rem = horasDormidas * 0.20;
+
+        msg.innerHTML = " Ao dormir " + (horasDormidas).toFixed(2) + "</br>horas, você dormiu: " + (hora1).toFixed(2) + " horas na fase 1, </br>" + hora2 + " horas na fase 2,  " + (hora3).toFixed(2) + "</br> horas na fase 3,  " + (rem.toFixed(2)) + " horas na fase REM";
+    }
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex006</title>
+</head>
+<body>
+    Digite o nome do aluno: <input id="nm_al"> <br>
+    Digite a nota 1: <input id="vl_atv1"> <br>
+    Digite a nota 2: <input id="vl_atv2"> <br>
+    Digite a nota 3: <input id="vl_atv3"> <br>
+    <button onclick="nota()">mostrar notas</button>
+
+    <div id="msg"></div>
+</body>
+<script>
+    function nota(){
+        var nome = nm_al.value;
+        var nt1 = Number(vl_atv1.value);
+        var nt2 = Number(vl_atv2.value);
+        var nt3 = Number(vl_atv3.value);
+        var soma = nt1 + nt2 + nt3;
+        var media = soma / 3;
+        
+        msg.innerHTML = "A soma das suas tres atividades é: " + soma + " " + nome + " , a média de suas atividades é:" + media.toFixed(1);
+    }
+</script>
+</html>

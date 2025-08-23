@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex007</title>
+</head>
+<body>
+    Digite sua nota da continuada: <input id="ipt_cont"> <br>
+    Digite sua nota semestral: <input id="ipt_semestral"> <br>
+    Digite seu nome: <input id="ipt_nome"><br>
+    <button onclick="calcular()">Calcular</button>
+
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function calcular(){
+        var continuada = Number(ipt_cont.value);
+        var semestral = Number(ipt_semestral.value);
+        var media = continuada * 0.4 + semestral * 0.6;
+        var nome = ipt_nome.value;
+
+        msg.innerHTML = "A média de " + nome + " será " + media
+    }
+</script>
+</html>

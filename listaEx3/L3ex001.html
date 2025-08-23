@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 Ex001</title>
+</head>
+<body>
+    digite o primeiro número: <input id="ipt_num1"> <br>
+    digite o segundo número: <input id="ipt_num2"> <br>
+    <button onclick="soma()">Soma</button> <br>
+    <button onclick="sub()">Subtração</button> <br>
+    <button onclick="divi()">Divisão</button> <br>
+    <button onclick="mult()">Multiplicação</button> <br>
+    <div id="div_msg"></div>
+
+
+</body>
+    <script>
+        function soma(){
+            var num1 = Number(ipt_num1.value);
+            var num2 = Number(ipt_num2.value);
+            var resultado = (num1 + num2);
+
+            div_msg.innerHTML = "A soma entre " + num1 + " com " + num2 + " é igual a: " + resultado 
+        }
+
+        function sub(){
+            var num1 = Number(ipt_num1.value);
+            var num2 = Number(ipt_num2.value);
+            var resultado = (num1 - num2);
+
+            div_msg.innerHTML = "A subtração entre o primeiro número: " + num1 + " e o segundo número " + num2 + "é igual a " + resultado;
+        }
+
+        function divi(){
+            var num1 = Number(ipt_num1.value);
+            var num2 = Number(ipt_num2.value);
+            var resultado = (num1 / num2);
+
+            div_msg.innerHTML = "O resultado da divisão entre " + num1 + " e " + num2 + " é igual a " + resultado ; 
+        }
+
+        function mult(){
+            var num1 = Number(ipt_num1.value);
+            var num2 = Number(ipt_num2.value);
+            var resultado = (num1 * num2);
+
+            div_msg.innerHTML = "o resultado da multiplicação entre " + num1 + " e o " + num2 + " é igual a " + resultado;
+        }
+    </script>
+</html>

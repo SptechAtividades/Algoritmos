@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex005</title>
+</head>
+<body>
+    Digite o valor da sua passagem: <input id="vl_ps"> <br>
+    Digite quantas viagens você fará por mês: <input id="viagem"> <br>
+    <button onclick="economize()">Ver economia</button>
+
+    <div id="msg"></div>
+</body>
+<script>
+    function economize(){
+        var valor = Number(vl_ps.value);
+        var viagens = Number(viagem.value);
+        var resultado = (valor * viagens) / 2;
+
+        msg.innerHTML = "Você irá economizar o valor de R$" + resultado;
+    }
+</script>
+</html>

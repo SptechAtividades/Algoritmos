@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex012</title>
+</head>
+<body>
+    Digite aqui o valor do seu "KI": <input id="ipt_ki">
+
+    <button onclick="transformar1()">SSJ1</button>
+    <button onclick="transformar2()">SSJ2</button>
+    <button onclick="transformar3()">SSJ3</button>
+
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function transformar1(){
+        var ssj1 = "Super Sayajin 1"
+        var ki = Number(ipt_ki.value);
+        tranf1 = ki * 50;
+        msg.innerHTML = " Após se transformar em "+ ssj1 +", o ki desse Sayajin passa a ser de " + tranf1 ;
+    }
+    function transformar2(){
+        var ssj2 = "Super Sayajin 2"
+        var ki = Number(ipt_ki.value);
+        tranf2 = ki * 100;
+        msg.innerHTML = " Após se transformar em "+ ssj2 +", o ki desse Sayajin passa a ser de " + tranf2;
+    }
+    function transformar3(){
+        var ssj3 = "Super Sayajin 3"
+        var ki = Number(ipt_ki.value);
+        tranf3 = ki * 200;
+        msg.innerHTML = " Após se transformar em "+ ssj3 +", o ki desse Sayajin passa a ser de " + tranf3 ;
+    }
+</script>
+</html>

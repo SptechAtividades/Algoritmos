@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula06</title>
+</head>
+<body>
+    <h2>Tratando variáveis globais</h2>
+    <button onclick="clique()">clique aqui:<button>
+        você clicou <b id="b_cont">0</b> vezes
+
+</body>
+<script>
+    var ax_contador = 0;
+    function clique(){
+        ax_contador = ax_contador + 1;
+        b_cont.innerHTML = ax_contador;
+    }
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L3 ex010</title>
+</head>
+<body>
+    digite aqui o sabor da pizza: <input id="ipt_pizza"> <br>
+    digite aqui o valor da pizza: <input id="ipt_valor"> <br>
+    digite aqui a quantidade de amigos: <input id="ipt_amigos"> <br>
+    <button onclick="calcular()">Ver valor por amigo</button>
+
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function calcular(){
+        //recebendo dados
+        var sabor = ipt_pizza.value;
+        var valor = Number(ipt_valor.value);
+        var amigos = Number(ipt_amigos.value);
+
+        //faz a adição da gorjeta no valor final da pizza
+        var gorjeta = Number(valor * 0.10); //para gorjeta (n confundir c calculo seu burro animal)
+
+        // valor final da pizza 
+        var valor = Number(valor + gorjeta);
+
+        //calculo de quanto cada amigo vai pagar
+        var div_amigos = Number(valor / amigos);
+
+        msg.innerHTML = "Cada amigo(a) vai colaborar com R$" + div_amigos + " para a pizza de " + sabor;
+    }
+
+    // obs: prestar mais atenção para evitar erros bestas.
+</script>
+</html>
