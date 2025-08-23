@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L02Ex05</title>
+</head>
+<body>
+    <h2>Opnião da Mamãe e da Vovó</h2>
+    inserir nota da escola <input id="ipt_nota"><br><br>
+    <button onclick="mamae()">opnião da mamae</button><br><br>
+    <button onclick="vovo()">opnião da vovo</button><br><br>
+    <div id="divMsgM">Resposta da mamae</div>
+    <div id="divMsgV">Resposta da vovo</div>
+
+    <script>
+        function vovo(){
+            divMsgV.innerHTML = "Muito bem, que neto inteligente, porque tirou " + ipt_nota.value;
+        }
+        function mamae(){
+            divMsgM.innerHTML = "Não fez mais que tua obrigação com essa nota " + ipt_nota.value;
+        }
+    </script>
+</body>
+</html>

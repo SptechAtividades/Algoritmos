@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L02Ex06</title>
+</head>
+<body>
+    <h2>Controle do Farol</h2><br>
+    <button onclick="pare()">Pare</button><br><br>
+    <button onclick="pense()">Pense</button><br><br>
+    <button onclick="siga()">Siga</button><br><br>
+    <div id="div_msg">Situação do farol</div>
+
+    <script>
+        function pare(){
+            div_msg.innerHTML = 'Pare e aguarde!';
+        }
+
+        function pense(){
+            div_msg.innerHTML = 'Pense se pode seguir ou se deve parar!';
+        }
+
+        function siga (){
+            div_msg.innerHTML = 'Pode seguir adiante';
+        }
+    </script>
+</body>
+</html>
