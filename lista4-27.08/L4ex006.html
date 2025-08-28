@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>l4 ex006</title>
+</head>
+<body>
+    Digite q quantidade de KWh de luz consumidas por mês: <br>
+    <input id="ipt_kwh"> <br>
+    <button onclick="calcular()">Calcular conta de luz</button>
+    <h1 id="msg"></h1>
+</body>
+<script>
+function calcular(){
+    var kwh = Number(ipt_kwh.value);
+    var conta = kwh * 0.85;
+
+    if (conta < 100){
+        var desconto = conta * 0.10; 
+        conta -= desconto;
+        msg.innerHTML = `Sua conta de luz (com desconto de ${desconto.toFixed(2)}) ficou: R$ ${conta.toFixed(2)}`;
+    } else {
+        msg.innerHTML += `Sua conta de luz ficou: R$ ${conta.toFixed(2)}`;
+    }
+}
+
+
+</script>
+</html>

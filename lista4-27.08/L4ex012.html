@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex012</title>
+</head>
+<body>
+    <h2>Análise CNH</h2>
+    digite aqui o seu nome: <br>
+    <input id="ipt_nome"><br>
+    digite aqui o sua idade: <br>
+    <input id="ipt_idade"><br>
+    <button onclick="avaliar()">Avaliar aluno</button>
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function avaliar(){
+        var nome = ipt_nome.value;
+        var idade = ipt_idade.value;
+
+        if(ipt_idade.value >= 18){
+            msg.innerHTML = `Olá ${nome}! vamos começar o seu processo de tirar a carteira de motorista?`
+        }else{
+            msg.innerHTML = `${nome} vai jogar playstation!`
+        }
+    }
+</script>
+</html>

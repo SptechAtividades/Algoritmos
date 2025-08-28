@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex001</title>
+</head>
+<body>
+    Digite aqui sua idade: <br>
+    <input id="ipt_idade"><br>
+    <button onclick="Calcular()">Ir para a festa</button>
+    <h1 id="msg"></h1>
+</body>
+<script>
+    function Calcular(){
+    var idade = Number(ipt_idade.value);
+    if(idade < 18){
+        alert("Perdir permissão aos papaises e as momoeses");
+    }else{
+        alert('Liberado para a festa');
+    }
+    alert('#partiufesta');
+    }
+</script>
+</html>

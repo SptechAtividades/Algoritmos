@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex002</title>
+</head>
+<body>
+    <h2>Controle de refrigerante</h2>
+    Quantas latinha de refrigerante você bebe por dia? <br>
+    <input id="ipt_refri"><br>
+    <button onclick="calcular()">Quantos refris?</button><br>
+    <h2 id="msg"></h2>
+</body>
+<script>
+function calcular(){
+    var qtd_refri = Number(ipt_refri.value);
+    var resultado = Number(qtd_refri * 365);
+    if (resultado >= 500){
+        msg.innerHTML = `Cuidado com a Diabetes, você está consumindo ${resultado} latinhas por ano`
+    }
+}
+</script>
+</html>

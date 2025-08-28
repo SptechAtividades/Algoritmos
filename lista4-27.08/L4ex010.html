@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex010</title>
+</head>
+<body>
+    Digite aqui a série que você assistiu: <br>
+    <input id="ipt_serie"><br>
+    Digite aqui o total de episódios: <br>
+    <input id="ipt_ep"><br>
+    <button onclick="calcular()">Verificar nível</button>
+    <h3 id="msg"></h3>
+</body>
+<script>
+    function calcular(){
+        var serie = ipt_serie.value;
+        var episodios = Number(ipt_ep.value);
+        var horasAssistidas = episodios * 22;
+        var horas = horasAssistidas / 60;
+
+        
+        if(horasAssistidas > 30){
+            msg.innerHTML = `Uau, você realmente gosta de ${serie} <br>
+            total de horas assistidas: ${horas}
+            `;
+        }else{
+            msg.innerHTML = `Vejo que você gosta da série ${serie}, <br> 
+            total de horas assistidas: ${horas}`;
+        }
+    }
+</script>
+</html>

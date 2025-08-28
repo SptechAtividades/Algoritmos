@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex003</title>
+</head>
+<body>
+    Digite o valor da primeira nota <br>
+    <input id="ipt_n1"> <br>
+    
+    Digite o valor da segunda nota <br>
+    <input id="ipt_n2"> <br>
+    
+    Digite o valor da terceira nota <br>
+    <input id="ipt_n3"> <br>
+
+    <button onclick="calcular()">Analisar desempenho</button>
+
+    <h3 id="msg"></h3>
+</body>
+<script>
+    function calcular(){
+        var nota1 = Number(ipt_n1.value);
+        var nota2 = Number(ipt_n2.value);
+        var nota3 = Number(ipt_n3.value);
+        var media = (nota1 + nota2 + nota3) / 3;
+
+        msg.innerHTML = `Sua média foi de ${media.toFixed(1)}!`;
+
+        if(media > 9.4){
+            msg.innerHTML += ` Parabéns, você é fora de série!`
+        }
+    }
+</script>
+</html>

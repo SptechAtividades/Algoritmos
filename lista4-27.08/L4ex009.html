@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex009</title>
+</head>
+<body>
+    <h2>Controle de peso do Elevador</h2>
+    Digite aqui a quantidade de homens que entraram no elevador:
+    <input id="ipt_homem"> <br>
+    Digite aqui a quantidade de mulheres que entraram no elevador:
+    <input id="ipt_mulheres"> <br>
+    <button onclick="analisar()">Analisar peso</button>
+    <h5 id="msg"></h5>
+</body>
+<script>
+    function analisar(){
+        var homens = Number(ipt_homem.value);
+        var mulher = Number(ipt_mulheres.value);
+        var mediaHomem = homens * 80;
+        var mediaMulheres = mulher * 60;
+        var lotacao = mediaHomem + mediaMulheres;
+
+        msg.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${lotacao} <br>`;
+
+        if(lotacao > 800){
+            msg.innerHTML += ` <div style= color:blue;>Será necessário que alguém desça para que o elevador se movimente</div>`;
+        }
+    }
+</script>
+</html>

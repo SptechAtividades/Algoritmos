@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex005</title>
+</head>
+
+<body>
+    <h2>Rola a pizza?</h2>
+    Digite o valor da pizza: <br>
+    <input id="ipt_valor"> <br>
+    Digite a quatidade de amigos: <br>
+    <input id="ipt_amigos"><br>
+    <button onclick="rolaPizza()">Rola a pizza?</button>
+    <div id="msg"></div>
+</body>
+<script>
+    function rolaPizza() {
+        var valor = Number(ipt_valor.value);
+        var amigo = Number(ipt_amigos.value);
+        var divisao = valor / amigo;
+        
+        msg.innerHTML = `Cada amigo vai pagar ${divisao.toFixed(1)} pela pizza`;
+
+        if(divisao > 20){
+            msg.innerHTML += `<div style= color:red;><b>Deu ruim a pizza!</b></div>`            
+        }
+
+    }
+</script>
+
+</html>

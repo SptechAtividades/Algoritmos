@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex007</title>
+</head>
+<body>
+    <h1>Financiamento da casa Própria</h1>
+
+    Digite aqui a renda da sua família <br>
+    <input id="ipt_renda"><br>
+    Digite o valor da prestação <br>
+    <input id="ipt_prestacao"><br>
+    <button onclick="calcular()">Verificar Financiamento</button>
+    <h4 id="msg"></h4>
+</body>
+<script>
+    function calcular(){
+        // recebe o valor das inputs
+        var renda = Number(ipt_renda.value);
+        var prest = Number(ipt_prestacao.value);
+        // calcula a porcentagem da renda familiar 
+        var financiamento = Number(prest / renda) * 100;
+        // confere se renda é superior a 30% da prestação
+        var complementar = (financiamento * 30) / 100;
+
+        msg.innerHTML = `A prestação corrensponde a ${financiamento}% da renda familiar!<br>`
+
+        if(financiamento > complementar){
+            msg.innerHTML += `<div style=color:red;> Será necessário complementar a renda familiar</div>`
+        }
+    }
+</script>
+</html>

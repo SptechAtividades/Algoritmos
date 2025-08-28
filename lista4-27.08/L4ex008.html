@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex008</title>
+</head>
+<body>
+    <h2>cheque especial</h2>
+    Digite aqui o saldo da conta: <br>
+    <input id="ipt_saldo"><br>
+    Solicite o valor a ser retirado da conta: <br>
+    <input id="ipt_debito"><br>
+    <button onclick="analisar()">Analisar conta</button>
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function analisar(){
+        var saldo = Number(ipt_saldo.value);
+        var debito = Number(ipt_debito.value);
+        var debitoAtual = saldo - debito;
+
+        if(debitoAtual <= 0){
+            msg.innerHTML = `<b style=color:red;>O saldo atual da conta corrente é ${debitoAtual}</b>`
+        }else{
+            msg.innerHTML = `O saldo atual da conta corrente é ${debitoAtual}`
+        }
+    }
+</script>
+</html>
