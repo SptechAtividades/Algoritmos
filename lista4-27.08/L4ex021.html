@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite aqui sua frequência: <br>
+    <input id="ipt_freq"> <br>
+    <button onclick="analisar()">Analisar</button>
+    <div id="msg"></div>
+</body>
+<script>
+    function analisar(){
+        var freq = Number(ipt_freq.value);
+
+        if(freq < 50){
+            msg.innerHTML = `<img src="/turista.avif">`
+        }else{
+            msg.innerHTML = ` <img src="/aluno.jpg">`
+        }
+    }
+</script>
+</html>

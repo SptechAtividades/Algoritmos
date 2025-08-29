@@ -10,12 +10,33 @@
     Insira aqui a quantidade de filhos que você tem: <br>
     <input id="ipt_filhos"> <br>
     <button onclick="analisar()">Analisar família</button>
+    <button onclick="limpar()">Limpar</button>
     <h2 id="msg"></h2>
+    
 </body>
 <script>
     function analisar(){
         var filhos = Number(ipt_filhos.value);
 
+        if(filhos >= 1){
+            msg.innerHTML += `Não tem tv <br>`;
+        }
+        
+        if(filhos >= 2){
+            msg.innerHTML += `Não tem interne<br>`;
+        }
+
+        if(filhos >= 3){
+            msg.innerHTML += `Não tem video game<br>`;
+        }
+
+        if(filhos >= 4){
+            msg.innerHTML += `Não tem Netflix<br>`;
+        }
+    }
+
+    function limpar(){
+        msg.innerHTML = ''
     }
 </script>
 </html>

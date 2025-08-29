@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex016</title>
+</head>
+<body>
+    <h2>Controle de peso no elevador - v2</h2>
+    digite a quantidade de homens no elevador: <br>
+    <input id="ipt_homem"><br>
+    digite a quantidade de mulheres no elevador: <br>
+    <input id="ipt_mulher"><br>
+    <button onclick="calcular()">Ligar elevador</button>
+    <h2 id="msg"></h2>
+</body>
+<script>
+    function calcular(){
+        var h = Number(ipt_homem.value);
+        var m = Number(ipt_mulher.value);
+        var calcHomem = h * 90;
+        var calcMulher = m * 70;
+        var peso = calcHomem + calcMulher;
+        var diferenca = peso - 500; 
+
+        if(peso <= 500){
+            msg.innerHTML = `<span style=color:green;>O elevador vai se mover, pois o peso é ${peso}</span>`
+        }else{
+            msg.innerHTML = `<span style=color:red;>O elevador não vai se mover pois o peso é ${peso}, perca ${diferenca} para o elevador andar</span>`
+        }
+    }
+</script>
+</html>

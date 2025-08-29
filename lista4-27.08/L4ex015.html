@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    digite a primeira nota: <br>
+    <input id="ipt_n1"> <br>
+    digite a segunda nota: <br>
+    <input id="ipt_n2"> <br>
+    <button onclick="calcula()">Verificar situação</button>
+</body>
+<script>
+    function calcula(){
+        var nota1 = Number(ipt_n1.value);
+        var nota2 = Number(ipt_n2.value);
+        var media = (nota1 + nota2) / 2;
+
+        if(media >= 6){
+            alert(`Parabén, você foi aprovado com a média: ${media}`)
+        }else{
+            alert(`tente outra vez, pois sua média é: ${media}`)
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex019</title>
+</head>
+<body>
+    Digite a quantidade de chocolates comprados: <br>
+    <input id="ipt_chocolate"><br>
+    <button onclick="calcular()">Calcular</button>
+    <h3 id="msg">
+    </h3>
+</body>
+<script>
+    function calcular(){
+        var qtdChocolate = Number(ipt_chocolate.value);
+        var preco = 3.00;
+        var desconto = preco - 0.50;
+
+        if(qtdChocolate > 6){
+            preco = desconto * qtdChocolate;
+
+            msg.innerHTML = `O valor da sua compra foi: ${preco}`
+        }else{
+            msg.innerHTML = `O valor da sua compra foi: ${preco}`
+            
+        }
+        
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex021</title>
+</head>
+<body>
+    Digite a temperatura do ambiente: <br>
+    <input id="ipt_temp"><br>
+    <button onclick="analisar()">analisar o clima</button>
+    <di id="msg">
+
+    </div>
+</body>
+<script>
+    function analisar(){
+        var temp = Number(ipt_temp.value);
+
+        if(temp < 10){
+            msg.innerHTML = ` Apropriada p/ conservar alimento`
+        }else{
+            msg.innerHTML = ` Inapropriada p/ conservar alimento`
+
+        }
+    }
+</script>
+</html>

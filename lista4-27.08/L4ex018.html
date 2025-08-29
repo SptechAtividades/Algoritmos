@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex018</title>
+</head>
+<body>
+    <h2>teste de devisibilidade:</h2>
+    digite o primeiro número: <br>
+    <input id="ipt_n1">
+    digite o segundo número: <br>
+    <input id="ipt_n2"><br>
+    <button onclick="testar()">Testar</button>
+    <div id="msg"></div>
+</body>
+<script>
+    function testar(){
+        var num1 = Number(ipt_n1.value);
+        var num2 = Number(ipt_n2.value);
+
+        if(num1 % num2 == 0){
+            msg.innerHTML = `Positivo`
+        }else{
+            msg.innerHTML = `Negativo`
+        }
+    }
+</script>
+</html>

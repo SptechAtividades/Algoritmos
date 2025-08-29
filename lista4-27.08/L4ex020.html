@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex020</title>
+</head>
+<body>
+    <h2>Análise de economia:</h2>
+    qual a sua meta de economia? <br>
+    <input id="ipt_economia"><br>
+    Qual o valor guardado? <br>
+    <input id="ipt_valorGuardado"><br>
+    <button onclick="calcular()">calcular</button>
+    <div id="msg"></div>
+</body>
+<script>
+    function calcular(){
+        var economia = Number(ipt_economia.value);
+        var guardado = Number(ipt_valorGuardado.value);
+        var diferenca = economia - guardado;
+
+        if(guardado == economia){
+            msg.innerHTML = `Parabéns a meta foi alcançada!`
+        }else{
+            msg.innerHTML = `sua meta ultrapassou`
+        }
+
+        if(guardado < economia){
+            msg.innerHTML = `Força! Ainda em busca da meta! Falta ${diferenca}`
+        }
+
+    }
+</script>
+</html>

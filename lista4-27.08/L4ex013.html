@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex013</title>
+</head>
+<body>
+    <h2>Verificações Financeiras</h2>
+    Digite aqui o valor do seu saldo em conta: <br>
+    <input id="ipt_saldo"><br>
+    <button onclick="verificar()">Verificar finanças</button><br>
+    <div id="msg"></div>
+</body>
+<script>
+    function verificar(){
+        var saldo = Number(ipt_saldo.value);
+
+        if(saldo == 0){
+            msg.innerHTML = `Conta ZERADA`
+        }
+
+        if(saldo <0){
+            msg.innerHTML = `<b style=color:red;>Está devendo!</b>`
+        }
+        if(saldo > 0){
+            msg.innerHTML = `<span style=color:blue;>Saldo Positivo! :)</span>`
+        }
+
+    }
+</script>
+</html>

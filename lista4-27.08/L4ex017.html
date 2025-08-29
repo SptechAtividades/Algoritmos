@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex017</title>
+</head>
+<body>
+    <h2>par ou ímpar</h2>
+    digite aqui um número: <br>
+    <input id="ipt_num"><br>
+    <button onclick="analisar()">Analisar</button>
+    <div id="msg">
+
+    </div>
+</body>
+<script>
+    function analisar(){
+        var num = Number(ipt_num.value);
+
+        if(num % 2 == 0){
+            msg.innerHTML = `<div style="color:red; background-color: yellow;">Esse número é par </div>`
+        }else{
+            msg.innerHTML = `<b style=color:blue;>Esse número é impar!</b>`
+        }
+    }
+</script>
+</html>

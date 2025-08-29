@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4 ex014</title>
+</head>
+
+<body>
+    <h2>Análise da c/c (Conta Corrente)</h2> <br>
+    Digite aqui o saldo da conta: <br>
+    <input id="ipt_saldo"> <br>
+    Digite aqui o saldo a ser retirado: <br>
+    <input id="ipt_debito"> <br>
+    <button onclick="calcular()">Analisar conta</button>
+    <div id="msg"></div>
+</body>
+<script>
+    function calcular() {
+        var saldo = Number(ipt_saldo.value);
+        var debito = Number(ipt_debito.value);
+        var saldoFinal = (saldo - debito);
+
+        if (saldoFinal < 0) {
+            msg.innerHTML = `<b style=color:red;>O saldo atual da conta corrente é ${saldoFinal}</b>`;
+            console.log('final menor')
+        } else {
+            msg.innerHTML = `<b style=color:blue;>O saldo atual da conta corrente é ${saldoFinal}</b>`;
+            console.log('final maior')
+
+        }
+    }
+</script>
+
+</html>
